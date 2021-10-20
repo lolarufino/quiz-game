@@ -1,6 +1,6 @@
 # Quiz Game
 
-## 🚧 Under Construction 🚧
+🚧 Under Construction 🚧
 
 ## Project setup
 ```

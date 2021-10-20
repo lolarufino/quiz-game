@@ -1,6 +1,6 @@
 <template>
   <div class="main-wrapper">
-    <h1 class="title">Quiz Game</h1>
+    <Header />
     <p class="text">
       Here you have a quiz game to practice some coding interview questions.
       Good luck! 🍀
@@ -17,6 +17,7 @@
 
 <script lang="ts">
 import { defineComponent } from "vue";
+
 export default defineComponent({
   name: "Home",
 });
@@ -25,17 +26,11 @@ export default defineComponent({
 <style lang="scss">
 @import "../styles/variables.scss";
 .main-wrapper {
-  height: 100vh;
+  height: 70vh;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: space-evenly;
-  .title {
-    font-family: $titlefont;
-    font-size: 48px;
-    color: $maincolor;
-    text-shadow: 3px 3px white, 5px 5px $maincolor;
-  }
+  justify-content: space-between;
   .text {
     font-family: $bodyfont;
     font-size: 16px;

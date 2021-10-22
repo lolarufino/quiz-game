@@ -1,6 +1,5 @@
 <template>
   <div class="main-wrapper">
-    <Header />
     <p class="text">
       Here you have a quiz game to practice some web developing questions. Good
       luck! 🍀

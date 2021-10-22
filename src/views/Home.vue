@@ -2,8 +2,8 @@
   <div class="main-wrapper">
     <Header />
     <p class="text">
-      Here you have a quiz game to practice some coding interview questions.
-      Good luck! 🍀
+      Here you have a quiz game to practice some web developing questions. Good
+      luck! 🍀
     </p>
     <img
       src="https://i.ibb.co/f9zG1Jm/animation-640-kuxzpiiebig.gif"
@@ -25,6 +25,7 @@ export default defineComponent({
 
 <style lang="scss">
 @import "../styles/variables.scss";
+@import "../styles/extends.scss";
 .main-wrapper {
   height: 70vh;
   display: flex;
@@ -37,19 +38,7 @@ export default defineComponent({
     color: darkgray;
   }
   .button {
-    padding: 10px;
-    font-size: 24px;
-    font-family: $titlefont;
-    background-color: $maincolor;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: all 300ms ease-in-out;
-    &:hover {
-      transform: translate(-4px, -4px);
-      box-shadow: 2px 2px white, 4px 4px $maincolor;
-    }
+    @extend %button-pattern;
   }
 }
 </style>

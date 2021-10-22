@@ -1,0 +1,15 @@
+%button-pattern {
+  padding: 10px;
+  font-size: 24px;
+  font-family: $titlefont;
+  background-color: $maincolor;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 300ms ease-in-out;
+  &:hover {
+    transform: translate(-4px, -4px);
+    box-shadow: 2px 2px white, 4px 4px $maincolor;
+  }
+}

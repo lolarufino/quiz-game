@@ -25,6 +25,7 @@
           :value="key"
           @change="answered($event)"
           :disabled="selectedAnswer !== ''"
+          data-test="answer"
         />
         {{ decodeURIComponent(answer) }}
       </label>

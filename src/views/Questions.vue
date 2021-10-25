@@ -158,6 +158,7 @@ export default defineComponent({
 @media screen and (max-width: $responsive) {
   .questions-wrapper {
     height: fit-content;
+    width: 62vw;
     .question-title {
       margin-bottom: 35px;
     }

@@ -4,12 +4,14 @@ import axios from 'axios';
 export default createStore({
   state: {
     questions: [
-    ]
+    ],
+    isLoading: true
   },
   mutations: {
     getQuestions(state, payload){
       const questionsArray = payload.map((question: any) => { return {question: question.question, answers: {...question.incorrect_answers, correct: question.correct_answer}, correctAnswer: "correct"}});
       state.questions = questionsArray;
+      state.isLoading = false;
     }
   },
   actions: {

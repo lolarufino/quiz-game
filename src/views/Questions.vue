@@ -1,6 +1,9 @@
 <template>
   <div>
-    <div v-if="index < questions.length" class="questions-wrapper">
+    <div
+      v-if="index < questions.length && !this.isLoading"
+      class="questions-wrapper"
+    >
       <p class="question-title">
         {{ decodeURIComponent(questions[index].question) }} 🤔
       </p>
@@ -44,6 +47,12 @@
         Results
       </button>
     </div>
+    <div v-else-if="this.isLoading">
+      <img
+        src="https://i.ibb.co/PFFQFMy/animation-200-kv7urt46.gif"
+        alt="Loading gif"
+      />
+    </div>
     <div v-else class="questions-wrapper">
       <div class="questions-container results-container">
         <p class="question-title">Results</p>
@@ -62,7 +71,7 @@ import { mapState, mapActions } from "vuex";
 export default defineComponent({
   name: "Questions",
   computed: {
-    ...mapState(["questions"]),
+    ...mapState(["questions", "isLoading"]),
   },
   methods: {
     ...mapActions(["fetchQuestionsFromApi"]),
